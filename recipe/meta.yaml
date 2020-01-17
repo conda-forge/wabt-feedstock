@@ -1,4 +1,4 @@
-{% set version = "1.0.11" %}
+{% set version = "1.0.13" %}
 
 package:
   name: wabt
@@ -7,7 +7,7 @@ package:
 source:
   fn: wabt-{{ version }}.tar.gz
   url: https://github.com/WebAssembly/wabt/archive/{{ version }}.tar.gz
-  sha256: 90e7f4a4e924e38af4edb6ca298ade662869c5b61a12399e71ee53d598d52cbe
+  sha256: 496dc0477029526aeaceafe0c2492e458ce89dada0e4f9640ecce1500f308a3d
 
 build:
   number: 0
