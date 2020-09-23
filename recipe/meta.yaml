@@ -37,7 +37,7 @@ test:
 
 about:
   home: https://github.com/WebAssembly/wabt
-  license: Apache 2.0
+  license: Apache-2.0
   license_file: LICENSE
   summary: The WebAssembly Binary Toolkit
 
