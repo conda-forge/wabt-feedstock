@@ -5,7 +5,6 @@ package:
   version: {{ version }}
 
 source:
-  fn: wabt-{{ version }}.tar.gz
   url: https://github.com/WebAssembly/wabt/archive/{{ version }}.tar.gz
   sha256: 925f47020705cd2cc00a4ff6a36ab08f8adf6d08c7eac5057db0db38b6b2f16d
 
