@@ -5,8 +5,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/WebAssembly/wabt/archive/{{ version }}.tar.gz
-  sha256: 925f47020705cd2cc00a4ff6a36ab08f8adf6d08c7eac5057db0db38b6b2f16d
+  url: https://github.com/WebAssembly/wabt/releases/download/{{ version }}/wabt-{{ version }}.tar.xz
+  sha256: fc421029e1964dd6ac846cf4270ae8130a3a4d9d553bf41c175a56da8e4223ee
 
 build:
   number: 0
