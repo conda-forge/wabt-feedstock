@@ -18,7 +18,7 @@ requirements:
     - {{ compiler("cxx") }}
     - cmake
     - ninja
-    - python 2.7.*
+    - python
   host:
 
 test:
