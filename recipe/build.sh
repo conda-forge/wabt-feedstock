@@ -9,8 +9,8 @@ then
 
     # Workaround lack of `MAP_ANONYMOUS` on macOS
     # xref: https://github.com/WebAssembly/wabt/issues/1620
-    export CFLAGS="${CFLAGS} -D__MAP_ANONYMOUS=MAP_ANON"
-    export CXXFLAGS="${CXXFLAGS} -D__MAP_ANONYMOUS=MAP_ANON"
+    export CFLAGS="${CFLAGS} --include "sys/mman.h" -DMAP_ANONYMOUS=MAP_ANON"
+    export CXXFLAGS="${CXXFLAGS} --include "sys/mman.h" -DMAP_ANONYMOUS=MAP_ANON"
 fi
 export EXTRA_CMAKE_ARGS
 
