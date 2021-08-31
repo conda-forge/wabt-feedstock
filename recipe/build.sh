@@ -6,6 +6,11 @@ EXTRA_CMAKE_ARGS=""
 if [[ `uname` == 'Darwin' ]];
 then
     EXTRA_CMAKE_ARGS="-DCMAKE_MACOSX_RPATH:BOOL=ON"
+
+    # Workaround lack of `MAP_ANONYMOUS` on macOS
+    # xref: https://github.com/WebAssembly/wabt/issues/1620
+    export CFLAGS="${CFLAGS} --include "sys/mman.h" -DMAP_ANONYMOUS=MAP_ANON"
+    export CXXFLAGS="${CXXFLAGS} --include "sys/mman.h" -DMAP_ANONYMOUS=MAP_ANON"
 fi
 export EXTRA_CMAKE_ARGS
 
