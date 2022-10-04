@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/WebAssembly/wabt/releases/download/{{ version }}/wabt-{{ version }}.tar.xz
-  sha256: 00d777830839bae81fdd25983464c1ded76775a6894396deb1305bda88d5f4e6
+  sha256: a0026969eb8dd62afb2a37111fc4f599a094afe96af62590e330448a5dcb4aea
   patches:
     # Include upstream patch for `cwriter-template` library issue.
     # xref: https://github.com/WebAssembly/wabt/pull/2015
