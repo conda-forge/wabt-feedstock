@@ -1,0 +1,33 @@
+From 2d193b1829bd4e9e59ca4a9999d391bc3eef13a9 Mon Sep 17 00:00:00 2001
+From: Sam Clegg <sbc@chromium.org>
+Date: Tue, 4 Oct 2022 13:05:38 -0700
+Subject: [PATCH] wasm2c: Don't create a separate library for cwriter-template.
+ NFC
+
+Fixes: #2014
+---
+ CMakeLists.txt | 7 +++----
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 2935e9e5f..02154a861 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -495,14 +495,13 @@ if (BUILD_TOOLS)
+     ${WABT_SOURCE_DIR}/src/template/wasm2c.bottom.h
+     ${WABT_SOURCE_DIR}/src/template/wasm2c.includes.c
+     ${WABT_SOURCE_DIR}/src/template/wasm2c.declarations.c
+-    )
++  )
+ 
+-  add_library(cwriter-template wasm2c_header_top.cc wasm2c_header_bottom.cc wasm2c_source_includes.cc wasm2c_source_declarations.cc)
++  set(CWRITER_TEMPLATE_SRC wasm2c_header_top.cc wasm2c_header_bottom.cc wasm2c_source_includes.cc wasm2c_source_declarations.cc)
+ 
+   wabt_executable(
+     NAME wasm2c
+-    SOURCES src/tools/wasm2c.cc src/c-writer.cc
+-    LIBS cwriter-template
++    SOURCES src/tools/wasm2c.cc src/c-writer.cc ${CWRITER_TEMPLATE_SRC}
+     INSTALL
+   )
+ 
