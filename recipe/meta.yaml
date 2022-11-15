@@ -1,4 +1,4 @@
-{% set version = "1.0.30" %}
+{% set version = "1.0.31" %}
 
 package:
   name: wabt
@@ -6,11 +6,7 @@ package:
 
 source:
   url: https://github.com/WebAssembly/wabt/releases/download/{{ version }}/wabt-{{ version }}.tar.xz
-  sha256: a0026969eb8dd62afb2a37111fc4f599a094afe96af62590e330448a5dcb4aea
-  patches:
-    # Include upstream patch for `cwriter-template` library issue.
-    # xref: https://github.com/WebAssembly/wabt/pull/2015
-    - patches/PR_2015.patch
+  sha256: f92cdc7b59960f34e4446d5dd48e924093c28cfab4ccdf906c5bbcd462b1f386
 
 build:
   number: 0
