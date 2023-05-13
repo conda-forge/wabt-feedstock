@@ -1,11 +1,11 @@
-About wabt
-==========
+About wabt-feedstock
+====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/wabt-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/WebAssembly/wabt
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/wabt-feedstock/blob/main/LICENSE.txt)
 
 Summary: The WebAssembly Binary Toolkit
 
