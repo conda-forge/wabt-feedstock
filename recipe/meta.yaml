@@ -9,12 +9,13 @@ source:
   sha256: f92cdc7b59960f34e4446d5dd48e924093c28cfab4ccdf906c5bbcd462b1f386
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc<14]
 
 requirements:
   build:
     - {{ compiler("c") }}
+    - {{ stdlib("c") }}
     - {{ compiler("cxx") }}
     - cmake
     - ninja
