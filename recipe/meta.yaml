@@ -20,6 +20,8 @@ requirements:
     - ninja
     - python
   host:
+    - openssl
+  run:
 
 test:
   commands:
