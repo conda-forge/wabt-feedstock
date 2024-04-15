@@ -1,4 +1,4 @@
-{% set version = "1.0.31" %}
+{% set version = "1.0.34" %}
 
 package:
   name: wabt
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/WebAssembly/wabt/releases/download/{{ version }}/wabt-{{ version }}.tar.xz
-  sha256: f92cdc7b59960f34e4446d5dd48e924093c28cfab4ccdf906c5bbcd462b1f386
+  sha256: ec080d7e0f103c0a8e84f9c4f09340be77b89439b04c72b0f78f18991cd44359
 
 build:
   number: 0
@@ -20,13 +20,15 @@ requirements:
     - ninja
     - python
   host:
+    - openssl
+  run:
 
 test:
   commands:
     - spectest-interp --help
     - wasm-interp --help
     - wasm-objdump --help
-    - wasm-opcodecnt --help
+    - wasm-stats --help
     - wasm-validate --help
     - wasm2c --help
     - wasm2wat --help
