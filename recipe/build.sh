@@ -16,7 +16,7 @@ export EXTRA_CMAKE_ARGS
 
 mkdir "build_${CMAKE_CONFIG}"
 pushd "build_${CMAKE_CONFIG}"
-cmake -G "Ninja" \
+cmake ${CMAKE_ARGS} -G "Ninja" \
     -DCMAKE_BUILD_TYPE:STRING="${CMAKE_CONFIG}" \
     -DCMAKE_INSTALL_PREFIX:PATH="${PREFIX}" \
     -DCMAKE_POSITION_INDEPENDENT_CODE:BOOL=ON \
