@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -exuo pipefail
+
 export CMAKE_CONFIG="Release"
 
 if [[ `uname` == 'Darwin' ]];
