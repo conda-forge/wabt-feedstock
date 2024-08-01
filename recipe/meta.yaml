@@ -26,9 +26,11 @@ requirements:
 test:
   commands:
     - spectest-interp --help
+    - wasm-decompile --help
     - wasm-interp --help
     - wasm-objdump --help
     - wasm-stats --help
+    - wasm-strip --help
     - wasm-validate --help
     - wasm2c --help
     - wasm2wat --help
