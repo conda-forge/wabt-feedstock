@@ -10,6 +10,5 @@ cmake -G "Ninja" ^
     -DBUILD_SHARED_LIBS:BOOL=ON ^
     -DBUILD_TESTS:BOOL=OFF ^
     "%SRC_DIR%"
-ninja
-ninja install
+cmake --build . --target install --config %CMAKE_CONFIG%
 popd
