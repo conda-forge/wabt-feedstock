@@ -1,4 +1,4 @@
-{% set version = "1.0.37" %}
+{% set version = "1.0.38" %}
 
 {% set wabt_exes = [
     "spectest-interp",
@@ -21,7 +21,7 @@ package:
 
 source:
   url: https://github.com/WebAssembly/wabt/releases/download/{{ version }}/wabt-{{ version }}.tar.xz
-  sha256: aca7fc4ba9974ad456372ab35f9cc1bac0b9fab3321b6df399d14dda9ca8a1a9
+  sha256: 256a98503a0edb1a805627bce04d0ba3ed943341cfb2f89a5c953870c3979ecc
 
 build:
   number: 0
